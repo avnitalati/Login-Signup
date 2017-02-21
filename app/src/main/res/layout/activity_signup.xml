@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:layout_width="match_parent"
+<ScrollView xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
 <LinearLayout
@@ -40,7 +41,8 @@ android:textColor="@android:color/black"
     android:layout_marginRight="10dp"
     android:layout_marginTop="10dp"
     android:gravity="left"
-    />
+    android:id="@+id/edittext_name_edittext"
+    android:minHeight="47dp" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -56,12 +58,13 @@ android:textColor="@android:color/black"
             android:layout_marginTop="10dp"
             android:gravity="left"
 
-            />
+            android:id="@+id/edittext_lastname_edittext"
+            android:minHeight="50dip" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
-            android:hint="Username"
+            android:hint="EMail"
             style="@style/LoginButton"
             android:backgroundTint="@android:color/white"
             android:textColor="@android:color/black"
@@ -71,12 +74,12 @@ android:textColor="@android:color/black"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
             android:gravity="left"
-
-            />
-        <EditText
+            android:id="@+id/editext_email_edittext"
+            android:minHeight="50dip" />
+      /  <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
+            android:inputType="textPassword"
             android:hint="Password"
             style="@style/LoginButton"
             android:backgroundTint="@android:color/white"
@@ -87,12 +90,14 @@ android:textColor="@android:color/black"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
             android:gravity="left"
+            android:id="@+id/edittext_pass_edittext"
 
-            />
+
+            android:minHeight="50dip" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
+            android:inputType="textPassword"
             android:hint="Confirm password"
             style="@style/LoginButton"
             android:backgroundTint="@android:color/white"
@@ -103,8 +108,9 @@ android:textColor="@android:color/black"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
             android:gravity="left"
+            android:id="@+id/edittext_conpassword_edittext"
 
-            />
+            android:minHeight="50dip" />
 
 
 
@@ -113,7 +119,9 @@ android:textColor="@android:color/black"
             android:layout_height="wrap_content"
             android:text="Gender"
             android:layout_marginLeft="10dp"
-            android:textAppearance="?android:attr/textAppearanceMedium">
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textview_gender_textview"
+            android:textSize="15dp" >
 
         </TextView>
 
@@ -128,31 +136,39 @@ android:textColor="@android:color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Male"
-                android:textColor="@android:color/darker_gray">
+                android:textColor="@android:color/darker_gray"
+                android:id="@+id/RBmale">
 
             </RadioButton>
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Female"
-                android:textColor="@android:color/darker_gray">
+                android:textColor="@android:color/darker_gray"
+                android:id="@+id/RBfemale">
 
             </RadioButton>
         </RadioGroup>
-
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="number"
             android:hint="Contact number"
+            style="@style/LoginButton"
+            android:backgroundTint="@android:color/white"
+            android:textColor="@android:color/black"
             android:layout_margin="10dp"
             android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
-            android:id="@+id/editText">
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="left"
+            android:id="@+id/editText_contact_edittext"
 
-        </EditText>
+
+            android:minHeight="50dip" />
+
+
 
         <Button
             android:layout_width="match_parent"

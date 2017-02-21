@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Logistics</string>
+    <string-array name="ordername"></string-array>
+    <string-array name="from"></string-array>
+    <string-array name="to"></string-array>
+    <string-array name="price"></string-array>
+
+
+    <string name="title_activity_home">HomeActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 </resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_place_add_order"
+            android:icon="@drawable/ic_add_shopping_cart_black_24dp"
+            android:title="Place/Add Order" />
+        <item
+            android:id="@+id/nav_service"
+            android:icon="@drawable/ic_local_shipping_black_24dp"
+            android:title="Service" />
+        <item
+            android:id="@+id/nav_track"
+            android:icon="@drawable/ic_location_on_black_24dp"
+            android:title="Track" />
+        <item
+            android:id="@+id/nav_my_order"
+            android:icon="@drawable/ic_check_circle_black_24dp"
+            android:title="My Order" />
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/ic_settings_applications_black_24dp"
+            android:title="Setting" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="Logout" />
+    </group>
+
+
+
+
+</menu>

@@ -4,7 +4,7 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.hp.logistics.MainActivity"
+    tools:context="com.example.hp.logistics.LoginActivity"
     >
     <ImageView
         android:layout_width="match_parent"
@@ -33,14 +33,15 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="UserName"
+                android:hint="UserName/Email"
                 android:textColorHint="@android:color/black"
                 android:textColor="@android:color/black"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
                 android:layout_marginBottom="@dimen/activity_vertical_margin"
-                style="@style/LoginEditText"/>
+                style="@style/LoginEditText"
+                android:id="@+id/username_edittext" />
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -52,7 +53,8 @@
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
                 android:layout_marginBottom="@dimen/activity_vertical_margin"
                 android:inputType="textPassword"
-                style="@style/LoginEditText"/>
+                style="@style/LoginEditText"
+                android:id="@+id/password_edittext" />
             <Button
                 android:layout_width="match_parent"
               android:layout_height="wrap_content"
@@ -61,13 +63,15 @@
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
                 android:layout_marginBottom="@dimen/activity_vertical_margin"
-                style="@style/LoginButton"/>
+                style="@style/LoginButton"
+                android:id="@+id/btnLogin" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Forgot Password?"
                 android:gravity="center_horizontal"
                 android:textSize="16dp"
+                android:id="@+id/main_forgotpassword"
                 android:textColor="@android:color/black"/>
 
         <TextView
