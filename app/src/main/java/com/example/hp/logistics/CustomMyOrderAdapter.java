@@ -2,19 +2,13 @@ package com.example.hp.logistics;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.widget.RecyclerView;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.zip.Inflater;
-
-import static com.example.hp.logistics.R.layout.activity_myorderdetail;
 
 /**
  * Created by Hp on 2/16/2017.

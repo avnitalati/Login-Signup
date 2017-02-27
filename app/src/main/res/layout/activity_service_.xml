@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+   <RelativeLayout
+       android:id="@+id/activity_main"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       tools:context="com.example.hp.myorderlistview.MainActivity">
+      <LinearLayout
+          android:layout_width="1000dp"
+          android:layout_height="100dp"
+          android:id="@+id/linearLayout">
+         <ImageView
+             android:layout_width="100dp"
+             android:layout_height="100dp"
+             android:src="@drawable/cargoa"
+             android:scaleType="centerCrop"
+             android:id="@+id/img_cargo"
+             />
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="Cargo Service"
+             android:textSize="25dp"
+             android:gravity="center"
+             android:layout_marginTop="30dp"
+             android:id="@+id/tv_cargo"/>
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="400dp"
+          android:layout_height="100dp"
+          android:layout_marginTop="58dp"
+          android:orientation="vertical"
+          android:id="@+id/linearLayout2"
+          android:layout_marginEnd="0dp"
+          android:layout_below="@+id/linearLayout"
+          android:layout_alignParentStart="true">
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="Post Service"
+             android:gravity="left"
+             android:layout_marginEnd="0dp"
+             android:layout_marginRight="100dp"
+             android:layout_marginStart="40dp"
+             android:textSize="25dp"
+             android:id="@+id/tv_post"/>
+      </LinearLayout>
+      <LinearLayout
+          android:layout_width="500dp"
+          android:layout_height="90dp"
+          android:orientation="vertical"
+          android:layout_below="@+id/linearLayout"
+          android:layout_alignParentStart="true"
+          android:layout_marginTop="36dp">
+
+
+         <ImageView
+             android:layout_width="100dp"
+             android:layout_height="90dp"
+             android:src="@drawable/post"
+             android:id="@+id/img_post"
+             android:layout_marginTop="0dp"
+             android:layout_marginBottom="0dp"
+             android:layout_marginLeft="0dp"
+             android:layout_marginEnd="0dp"
+             android:layout_marginStart="0dp"
+             android:layout_gravity="right"
+             android:scaleType="centerCrop"
+             />
+      </LinearLayout>
+
+
+      <LinearLayout
+          android:layout_width="400dp"
+          android:layout_height="100dp"
+          android:layout_marginTop="370dp"
+          android:orientation="vertical"
+          android:layout_marginEnd="0dp"
+          android:layout_below="@+id/linearLayout"
+          android:layout_alignParentStart="true">
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="Courier Service"
+             android:gravity="left"
+             android:layout_marginEnd="0dp"
+             android:layout_marginRight="100dp"
+             android:layout_marginStart="40dp"
+             android:textSize="25dp"
+             android:id="@+id/tv_courior"/>
+      </LinearLayout>
+      <LinearLayout
+          android:layout_width="500dp"
+          android:layout_height="90dp"
+          android:orientation="vertical"
+          android:layout_below="@+id/linearLayout"
+          android:layout_alignParentStart="true"
+          android:layout_marginTop="340dp">
+
+
+         <ImageView
+             android:layout_width="100dp"
+             android:layout_height="100dp"
+             android:src="@drawable/courior1"
+             android:layout_gravity="right"
+             android:scaleType="fitCenter"
+             android:id="@+id/img_courier"
+             />
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="1000dp"
+          android:layout_height="100dp"
+          android:layout_marginTop="22dp"
+          android:layout_below="@+id/linearLayout2"
+          android:layout_alignParentStart="true">
+         <ImageView
+             android:layout_width="100dp"
+             android:layout_height="100dp"
+             android:src="@drawable/parcel"
+             android:scaleType="centerCrop"
+             android:layout_marginTop="20dp"
+             android:id="@+id/img_parcel"
+             />
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="Parcel Service"
+             android:textSize="25dp"
+             android:gravity="center"
+             android:id="@+id/tv_parcel"
+             android:layout_marginTop="45dp"/>
+      </LinearLayout>
+
+
+   </RelativeLayout>
+</ScrollView>

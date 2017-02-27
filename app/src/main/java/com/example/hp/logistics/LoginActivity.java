@@ -14,6 +14,16 @@ import android.widget.Toast;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import com.example.hp.logistics.AsyncTasks.AsyncResponse;
+import com.example.hp.logistics.AsyncTasks.WebserviceCall;
+//import com.logistics.AsyncTasks.AsyncResponse;
+//import com.logistics.AsyncTasks.WebserviceCall;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+
 
 public class LoginActivity extends AppCompatActivity {
     private TextView tvsignup;
@@ -45,9 +55,8 @@ public class LoginActivity extends AppCompatActivity {
     tvforgorpassword.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-     // Intent intent=new Intent(LoginActivity.this,ForgotPasswordActivity.class);
-       // startActivity(intent);
         showForgetpwdDialog();
+
     }
 });
 
@@ -55,9 +64,13 @@ public class LoginActivity extends AppCompatActivity {
         loginbtn .setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String emailStr = usernameET.getText().toString();
+                String passwordStr = passwordET.getText().toString();
+
+                // webservice call for login
+
                 String strusername=usernameET .getText() .toString() ;
                 String strpassword=passwordET .getText() .toString() ;
-
                 if (strusername .isEmpty()) {
                     Toast.makeText(LoginActivity.this, "please enter your email or username", Toast.LENGTH_SHORT).show();
                 } else if (!isValidEmail(strusername )) {
@@ -67,10 +80,36 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this, "please enter password", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    Toast.makeText(LoginActivity.this, "login successful", Toast.LENGTH_SHORT).show();
-                    Intent intent=new Intent(LoginActivity.this,HomeActivity.class);
-                    startActivity(intent);
+                   // Toast.makeText(LoginActivity.this, "login successful", Toast.LENGTH_SHORT).show();
+                    JSONObject object = new JSONObject();
+                    try {
+                        object.put("email",emailStr);
+                        object.put("password",passwordStr);
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+
+                    String jsonRequest = String.valueOf(object);
+                    String URL = "http://rapidans.esy.es/project/login.php";
+                    new WebserviceCall(LoginActivity.this, URL, jsonRequest, "Loading...", true, new AsyncResponse() {
+                        @Override
+                        public void onSuccess(final String message, JSONArray jsonData) {
+                            Toast.makeText(LoginActivity.this,message, Toast.LENGTH_SHORT).show();
+                            Intent intent=new Intent(LoginActivity.this,HomeActivity.class);
+                            startActivity(intent);
+
+                        }
+
+                        @Override
+                        public void onFailure(String message) {
+                            Toast.makeText(LoginActivity.this, message, Toast.LENGTH_SHORT).show();
+                        }
+                    }).execute();
+
                 }
+
+
+
             }
         });
 
@@ -87,6 +126,9 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         handleTextDialog();
+                        Intent intent=new Intent(LoginActivity.this,ForgotPasswordActivity.class);
+                        startActivity(intent);
+
                         dialog .dismiss() ;
                     }
                 })

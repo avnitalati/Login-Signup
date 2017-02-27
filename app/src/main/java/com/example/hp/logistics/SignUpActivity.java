@@ -1,5 +1,6 @@
 package com.example.hp.logistics;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -72,6 +73,10 @@ public class SignUpActivity extends AppCompatActivity  {
                         Toast.makeText(SignUpActivity.this, "password don't match", Toast.LENGTH_SHORT).show();
                     } else {
                         Toast.makeText(SignUpActivity.this, "login successful", Toast.LENGTH_SHORT).show();
+                        Intent intent=new Intent(SignUpActivity.this,HomeActivity.class);
+                        startActivity(intent);
+
+
                     }
 
                 }
